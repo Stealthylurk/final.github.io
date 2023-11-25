@@ -1,0 +1,121 @@
+
+.bg-img {
+  height: 105vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.2);
+  z-index: -1;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  transition: all 0.5s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: fit-content;
+}
+
+#home {
+  min-height: max-content; 
+  color: white; 
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+#home .hero-txt {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #B6EADA;
+  text-shadow: 0 0 0.05em #B6EADA;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 75px;
+}
+
+:root {
+--clr-neon: #B6EADA;
+--clr-bg: rgba(1, 1, 1, 1);
+--clr-white: rgba(255, 255, 255, 1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  body::-webkit-scrollbar {
+    width: 0em; /* Ширина колесика прокрутки */
+  }
+
+  .content {
+    flex: 1;
+    text-align: center;
+  }
+
+  .alert {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content; /* Задайте ширину по вашему усмотрению */
+    z-index: 9999;
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100vw;
+    min-height: fit-content;
+ }
+
+.card {
+    width: calc(33.33% - 40px);
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px;
+    overflow: hidden;
+    aspect-ratio: 1/1; /* Устанавливаем соотношение сторон 1:1 */
+  }
+
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+      
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  #game-board {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .game_img {
+    border-radius: 3px;
+  }
