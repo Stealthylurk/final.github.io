@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Swim Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/title_logo.png">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="styles/fontawesome.min.css">
+
+    <!-- Start Script -->
+    <script src="javascripts/jquery-1.11.0.min.js"></script>
+    <script src="javascripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="javascripts/bootstrap.bundle.min.js"></script>
+    <script src="javascripts/templatemo.js"></script>
+    <script src="javascripts/shop.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script>
+      // Инициализация маски для поля ввода номера телефона
+      $(document).ready(function() {
+        $('input[type="tel"]').inputmask();
+      });
+    </script>
+    <!-- End Script -->
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand logo h2" href="index.html">
+                Swim Store
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size: 20px;" href="index.html">Main Page</a>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex" style="font-size: 20px;">
+                    <a class="nav-icon position-relative text-decoration-none">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1" style="cursor: pointer;" onclick="openModal()"></i>
+                        <span id="cartBadge" class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark cart">0</span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none">
+                        <i class="far fa-heart text-dark ml-3" style="cursor: pointer;" onclick="openModalFav()"></i>
+                        <span id="favBadge" class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Start Content -->
+<div class="container-fluid" style="background-color: #e9fdf7;">
+    <div class="container py-5">
+        <div class="row">
+
+            <div class="col-lg-9 container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline shop-top-menu pb-3 pt-1">
+                            <li class="list-inline-item">
+                                <a class="h3 text-dark text-decoration-none mr-3" style="cursor: default;">Our products</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_1.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Chanel Healthy Glow Foundation')" ><i class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Chanel Healthy Glow Foundation')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">Speedo Silicone Swim Cap</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$15.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_2.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Diorshow Iconic Overcurl Mascara')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Diorshow Iconic Overcurl Mascara')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">TYR Latex Swim Cap</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_3.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Givenchy Le Rouge Lipstick')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Givenchy Le Rouge Lipstick')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">Jual Speedo Reversible</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$45.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_4.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Estée Lauder Advanced Serum')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Estée Lauder Advanced Serum')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">Magic5 Swim Goggles</a>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$100.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_5.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Tom Ford Eye Color Quad')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Tom Ford Eye Color Quad')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">FORM Swim Goggles</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$250.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_6.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Giorgio Armani Luminous Silk')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Giorgio Armani Luminous Silk')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">Speedo Vanquisher 2.0</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$19.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_7.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Lancôme Génifique')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Lancôme Génifique')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">Cressi Light</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$30.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_8.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('NARS Orgasm Blush')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('NARS Orgasm Blush')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">Arena powerfin pro</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$66.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="images/product_9.png">
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white" onClick="buttonclickFav('Dior Addict Lip Glow    ')"><i class="far fa-heart"></i></a></li> 
+                                        <li><a class="btn btn-success text-white mt-2" onClick="buttonclick('Dior Addict Lip Glow')"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" style="cursor: default;">
+                                <a class="h3 text-decoration-none">Dior Addict Lip Glow</a>
+                                
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">$38.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <!-- End Content -->
+
+    <!-- Start Brands -->
+    <section class="py-5" style="background-color: #d2feff;">
+        <div class="container my-4">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Our Brands</h1>
+                    <p>
+                        We take pride in offering only certified products from top beauty brands. 
+                        Our range consists of products developed by leading global brands to ensure our customers the highest quality.
+                    </p>
+                </div>
+                <div class="col-lg-9 m-auto tempaltemo-carousel">
+                    <div class="row d-flex flex-row">
+
+                        <!--Controls-->
+                        <div class="col-1 align-self-center">
+                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="prev">
+                                <i class="control-br fas fa-chevron-left"></i>
+                            </a>
+                        </div>
+                        <!--End Controls-->
+
+                        <!--Carousel Wrapper-->
+                        <div class="col">
+                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
+                                <!--Slides-->
+                                <div class="carousel-inner product-links-wap" role="listbox">
+
+                                    <!--First slide-->
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_01.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_02.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_03.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_04.png" alt="Brand Logo"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End First slide-->
+
+                                    <!--Second slide-->
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_05.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_06.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_07.png" alt="Brand Logo"></a>
+                                            </div>
+                                            <div class="col-3 p-md-5">
+                                                <a><img class="img-fluid brand-img" src="images/brand_08.png" alt="Brand Logo"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End Second slide-->
+
+                                </div>
+                                <!--End Slides-->
+                            </div>
+                        </div>
+                        <!--End Carousel Wrapper-->
+
+                        <!--Controls-->
+                        <div class="col-1 align-self-center">
+                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
+                                <i class="control-br fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <!--End Controls-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Brands-->
+
+
+    <!-- Start Footer -->
+    <div class="footer bg-light">
+        <div class="container">
+            <footer class="py-4">
+                <div class="border-bottom pb-3 mb-3" style="display: flex; justify-content: space-between;">
+                <ul class="nav justify-content-left">
+                  <li class="nav-item" style="font-size: 20px;"><a href="index.html" class="nav-link px-2 text-muted">Main Page</a></li>
+                </ul>
+                <div style="font-size: 35px !important; right: 0; display: flex;">
+                    <a  href="https://wa.me/77071007070" class="nav-link px-2 text-muted"><i class="fab fa-whatsapp"></i></a>
+                    <a  href="https://t.me/StealthyLurk" class="nav-link px-2 text-muted"><i class="fab fa-telegram"></i></a>  
+                    <a  href="https://www.instagram.com/barysarena_pool/" class="nav-link px-2 text-muted"><i class="fab fa-instagram"></i></a>  
+                </div>
+              </div>
+                <div>
+                <p class="text-center text-muted">&copy; 2023 by Aikhan Tolegenov</p>
+              </footer>                  
+        </div>
+      </div>
+    <!-- End Footer -->
+
+    <!-- Modal Windows -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-icon" onclick="closeModal(event)">×</span> <!-- Крестик для закрытия модального окна -->
+          <h2>Your Cart</h2>
+          <label class="cartItems" id="cartItems">Your Cart is Empty</label> <!-- Элемент для отображения списка товаров -->
+          <form class="modal-form">
+            <input type="text" id="nameInput" placeholder="Your Name">
+            <p><input type="tel" id="phoneInput" placeholder="Your Phone" data-inputmask="'mask': '+7-999-999-99-99'"></p>
+            <button type="button" style="background-color: rgb(105, 106, 106); border-radius: 30%;" onclick="dropCart(event)">Drop Cart</button>
+            <button type="button" style="background-color: rgb(88, 247, 88); border-radius: 30%;" onclick="sendOffer(event)">Offer</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Fav Modal Windows -->
+      <div class="modal-overlay" id="modalOverlayFav" onclick="closeModalFav(event)">
+        <div class="modal-content-fav" onclick="event.stopPropagation()">
+        <span class="close-icon" onclick="closeModalFav(event)">×</span> <!-- Крестик для закрытия модального окна -->
+          <h2>Your Favourites</h2>
+          <label class="cartItems" id="FavItems">Put Here your Favourite Products</label> <!-- Элемент для отображения списка товаров -->
+          <form class="modal-form">
+            <button type="button" style="background-color: rgb(88, 247, 88); border-radius: 10%;" onclick="closeModalFav(event)">Close</button>
+          </form>
+        </div>
+      </div>
+
+</body>
+
+</html>
